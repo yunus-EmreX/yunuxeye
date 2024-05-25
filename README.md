@@ -1,25 +1,25 @@
-# Yunuxeye - Pentest Araçları Entegrasyonu
+# Yunuxeye - Pentest Tool Integration
 
-Yunuxeye, çeşitli pentest araçlarını bir araya getirerek hedef sistemler hakkında kapsamlı bilgi toplamak için kullanılan bir Python scriptidir. Bu araç, Nmap, Masscan, Nikto, SSLyze, Lynis, PEASS-ng, DNSenum, DirBuster, OWASP ZAP, Fierce, Nslookup, Dig ve Dnsmap gibi araçları entegre eder ve çıktıları kullanıcıya detaylı açıklamalarla sunar.
+Yunuxeye is a Python script used to gather comprehensive information about target systems by bringing together various pentest tools. This tool integrates tools such as Nmap, Masscan, Nikto, SSLyze, Lynis, PEASS-ng, DNSenum, DirBuster, OWASP ZAP, Fierce, Nslookup, Dig, and Dnsmap, and presents the outputs to the user with detailed explanations.
 
-## Özellikler
+## Features
 
-- **Nmap** ile port taraması ve servis versiyon tespiti
-- **Whois** ile hedef IP hakkında kayıt bilgileri
-- **Masscan** ile hızlı port taraması
-- **Nikto** ile web sunucusu güvenlik taraması
-- **SSLyze** ile SSL/TLS yapılandırma analizi
-- **Lynis** ile hedef sistem güvenlik taraması
-- **PEASS-ng** ile potansiyel yetki yükseltme yolları tespiti
-- **DNSenum** ile DNS bilgi toplama
-- **DirBuster** ile dizin ve dosya brute-force taraması
-- **OWASP ZAP** ile web uygulama güvenlik taraması
-- **Fierce** ile DNS keşfi
-- **Nslookup** ve **Dig** ile DNS sorgulamaları
-- **Dnsmap** ile subdomain brute-force taraması
-- **Netcat** ile açık port taraması
+- **Nmap**: Port scanning and service version detection
+- **Whois**: Retrieving registration information about the target IP
+- **Masscan**: Fast port scanning
+- **Nikto**: Web server security scanning
+- **SSLyze**: SSL/TLS configuration analysis
+- **Lynis**: Security auditing of the target system
+- **PEASS-ng**: Identifying potential privilege escalation paths
+- **DNSenum**: DNS information gathering
+- **DirBuster**: Directory and file brute-force scanning
+- **OWASP ZAP**: Web application security scanning
+- **Fierce**: DNS reconnaissance
+- **Nslookup** and **Dig**: DNS queries
+- **Dnsmap**: Subdomain brute-force scanning
+- **Netcat**: Open port scanning
 
-## Gereksinimler
+## Requirements
 
 - Python 3.x
 - Nmap
@@ -27,68 +27,63 @@ Yunuxeye, çeşitli pentest araçlarını bir araya getirerek hedef sistemler ha
 - Nikto
 - SSLyze
 - Lynis
-- PEASS-ng (LinPEAS ve WinPEAS)
+- PEASS-ng (LinPEAS and WinPEAS)
 - DNSenum
 - DirBuster
 - OWASP ZAP
 - Fierce
-- Nslookup (bind-utils paketi)
-- Dig (bind-utils paketi)
+- Nslookup (bind-utils package)
+- Dig (bind-utils package)
 - Dnsmap
 - Netcat
 
-## Kurulum
+## Installation
 
-Öncelikle, gerekli araçların sisteminizde yüklü olduğundan emin olun:
+First, make sure the required tools are installed on your system:
 
 ```bash
 sudo apt-get update
 sudo apt-get install nmap masscan nikto sslyze lynis dnsenum dirbuster fierce dnsutils netcat
 
-PEASS-ng araçlarını indirin ve uygun dizinlere yerleştirin:
+Download the PEASS-ng tools and place them in appropriate directories:
 
 bash
 
 git clone https://github.com/carlospolop/PEASS-ng.git
 
-Kullanım
+Usage
 
-Script'i çalıştırmak için aşağıdaki adımları izleyin:
+To run the script, follow these steps:
 
-    Python scriptini indirin veya kopyalayın.
-    Terminalden scriptin bulunduğu dizine gidin.
-    Scripti çalıştırın:
+    Download or copy the Python script.
+    Navigate to the directory where the script is located in the terminal.
+    Run the script:
 
 bash
 
 python yunuxeye.py
 
-    İstenilen hedef IP adresi ve URL'yi girin.
-    Script, belirtilen araçları kullanarak hedef sistem hakkında bilgi toplamaya başlayacaktır.
+    Enter the desired target IP address and URL.
+    The script will start gathering information about the target system using the specified tools.
 
-Çıktılar
+Outputs
 
-Her araç, çalıştırıldıktan sonra çıktısını ve bu çıktının ne anlama geldiğini açıklayan bilgiler sunar. Bu açıklamalar, elde edilen verilerin anlaşılmasını ve yorumlanmasını kolaylaştırır.
-Katkıda Bulunma
+Each tool provides its output after execution, along with explanations of what the output means. These explanations facilitate understanding and interpretation of the obtained data.
+Contributing
 
-Bu projeye katkıda bulunmak isterseniz, lütfen şu adımları izleyin:
+If you would like to contribute to this project, please follow these steps:
 
-    Bu depoyu fork edin.
-    Kendi dalınızı oluşturun (git checkout -b ozellik/AmazingFeature).
-    Değişikliklerinizi commit edin (git commit -m 'AmazingFeature ekle').
-    Dalınıza push edin (git push origin ozellik/AmazingFeature).
-    Bir Pull Request açın.
+    Fork this repository.
+    Create your feature branch (git checkout -b feature/AmazingFeature).
+    Commit your changes (git commit -m 'Add some AmazingFeature').
+    Push to the branch (git push origin feature/AmazingFeature).
+    Open a pull request.
 
-Lisans
+License
 
-Bu proje MIT Lisansı ile lisanslanmıştır. Daha fazla bilgi için LICENSE dosyasına bakın.
-İletişim
+This project is licensed under the MIT License. See the LICENSE file for more details.
+Contact
 
-Herhangi bir sorunuz veya geri bildiriminiz varsa, lütfen e-posta ile iletişime geçin.
+If you have any questions or feedback, please contact us via email.
 
-Yunuxeye, pentest işlemlerinizde size kapsamlı ve detaylı bilgi sağlayarak güvenlik açıklarını daha etkili bir şekilde tespit etmenize yardımcı olur. Hedef sistemlerin güvenliğini artırmak için bu aracı kullanın ve sistemlerinizi daha güvende tutun.
-
-css
-
-
-Bu README dosyası, projenizin amacını, kullanımını, gereksinimlerini ve nasıl katkıda bulunulabileceğini açıkça anlatır. Ayrıca, kullanıcıların projenizle ilgili daha fazla bilgi edinmesini sağlar.
+Yunuxeye helps you to detect security vulnerabilities more effectively by providing comprehensive and detailed information in your pentest operations. Use this tool to enhance the security of your systems and keep them more secure.
